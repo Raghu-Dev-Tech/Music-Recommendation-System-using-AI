@@ -6,9 +6,9 @@ pd=Tk()
 pd.title("Music Recommended System")
 n=int(input("Enter the user number"))
 
-song_list_1 = pandas.read_table("C:/Users/nanda/OneDrive/Desktop/AI project/book.txt")
+song_list_1 = pandas.read_table(#"Directory of the "Users listen count" Data File should be given")
 song_list_1.columns = ['user_id', 'song_id', 'listen_count']
-song_list_2 =  pandas.read_csv("C:/Users/nanda/OneDrive/Desktop/AI project/song_data.csv")
+song_list_2 =  pandas.read_csv(#"Directory of the "song_data" Data File should be given")
 song_mix = pandas.merge(song_list_1, song_list_2.drop_duplicates(['song_id']), on="song_id", how="left")
 song_mix.head()
 
